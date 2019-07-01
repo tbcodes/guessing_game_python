@@ -1,0 +1,26 @@
+"""
+    Guessing number - Python - Medium Version - Truzz Blogg
+    
+    Original video (Truzz Blogg Channel): https://youtu.be/AoSExJn9zlA
+    
+    Simple guessing game where the user has 4 attempts to find out
+    the number we are looking for.
+"""
+
+import random
+
+# Generate a random secret number - Automatically
+top_secret = random.randint(1, 10)
+guess = int(input("Guess a number: "))
+
+# The While Loop will have some if statements in order to inform the user about each guess he/she has taken (Too low | Too high)
+while True:
+    if guess == top_secret:
+        print("Ohhh Yeaahh! You WON!!!")
+        break
+    elif guess < top_secret:
+        print("Too low!")
+        guess = int(input("Guess a number: "))
+    elif guess > top_secret:
+        print("Too high!")
+        guess = int(input("Guess a number: "))
